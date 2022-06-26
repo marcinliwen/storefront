@@ -32,6 +32,7 @@ module.exports = {
           DEFAULT: "#EEF0F5",
           medium: "#D9DFE8",
           dark: "#89959C",
+          red: "#F24C3D",
         },
       },
     },

@@ -1,4 +1,4 @@
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
+import { CardElement, useElements, useStripe, PaymentElement } from "@stripe/react-stripe-js"
 import { navigate } from "gatsby"
 import React, { useState } from "react"
 import { useCart } from "../../../hooks/use-cart"
@@ -92,8 +92,10 @@ const InjectableCardForm = ({ session }) => {
 
   return (
     <div className="mt-4">
+      <div className="payment-title"><h3>Card Payment</h3></div>
       <div>
         <CardElement className="py-4" />
+
         {errorMessage && (
           <span className="text-rose-500 mt-4">{errorMessage}</span>
         )}

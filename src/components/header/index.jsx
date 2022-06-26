@@ -87,14 +87,14 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-20">
       <header className="relative bg-white">
-        <Banner />
+{/*         <Banner /> */}
         <MobileMenu open={open} setOpen={setOpen} />
         <nav
           aria-label="Top"
           className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium flex items-center justify-between"
         >
           <div className="flex items-center">
-            <div className="h-16 flex items-center">
+            <div className="h-24 flex items-center">
               <button
                 type="button"
                 className="bg-white p-2 lg:hidden"
@@ -112,7 +112,7 @@ const Header = () => {
 
               <div className="ml-4 flex lg:ml-0 lg:mr-8">
                 <Link to="/">
-                  <img className="h-8 w-auto" src={Logo} alt="" />
+                  <img className="h-16 w-auto" src={Logo} alt="" />
                 </Link>
               </div>
             </div>
@@ -126,11 +126,20 @@ const Header = () => {
           </div>
 
           <div className="flex items-center justify-end">
-            <div className="hidden lg:flex">
+          <div className="hidden lg:flex">
+            
+            <a className="mr-4  btn-ui btn-second text-sm font-medium text-gray-700 hover:text-gray-600" href="tel:48506109445" target="_blank">+48 506 109 445</a>
+            <div>
+            <Link to="/kontakt" className="flex items-center text-sm px-4 py-2 font-medium text-gray-700 hover:text-gray-600">Kontakt</Link>
+            </div>
+            <AccountPopover customer={mockData.customer} />
+          </div>
+          <CartPopover cart={mockData.cart} />
+           {/*  <div className="hidden lg:flex">
               <RegionPopover regions={mockData.regions} />
               <AccountPopover customer={mockData.customer} />
             </div>
-            <CartPopover cart={mockData.cart} />
+            <CartPopover cart={mockData.cart} /> */}
           </div>
         </nav>
       </header>

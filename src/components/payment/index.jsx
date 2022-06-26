@@ -2,6 +2,9 @@ import React, { useEffect } from "react"
 import { useCart } from "../../hooks/use-cart"
 import ManualPayment from "./manual-payment"
 import StripePayment from "./stripe-payment"
+import PaypalPayment from "./paypal-payment"
+//import StripeAll from "./stripall-payment"
+
 
 const Payment = ({ cartId = null }) => {
   const {
@@ -22,14 +25,17 @@ const Payment = ({ cartId = null }) => {
     <div>
       {cart && cart.payment_sessions ? (
         cart.payment_sessions.map(ps => {
+       
           switch (ps.provider_id) {
             case "stripe":
-              return <StripePayment />
+             return <div><StripePayment />    <PaypalPayment /></div>
             case "manual":
               return <ManualPayment key="manual" />
+            case "paypal":
+              return <PaypalPayment /> 
             default:
               return null
-          }
+          } 
         })
       ) : (
         <div className="flex items-center py-4 justify-center">

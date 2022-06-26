@@ -23,6 +23,7 @@ const Banner = () => {
       )}
     >
       <p>Free shipping on all orders over $100</p>
+
       <button onClick={() => hideBanner()}>&times;</button>
     </div>
   )

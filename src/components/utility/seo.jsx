@@ -20,6 +20,9 @@ function SearchEngineOptimization({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const CLIENT_ID =
+  "Af2U3hIwnqTfpZKBhySt7GM2RGUpWvK58Ln_o1gv4QqPf_zmnGv_IVXw_C1T2L3S7eO1D6AtPJMllmDJ"
+
 
   return (
     <Helmet
@@ -62,7 +65,14 @@ function SearchEngineOptimization({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet" />
+       <script
+          src={`https://www.paypal.com/sdk/js?client-id=${CLIENT_ID}`}
+        ></script>
+    </Helmet>
   )
 }
 

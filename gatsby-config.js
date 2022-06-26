@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Medusa Gatsby Starter`,
-    description: `Kick off your next, great e-commerce project with this default starter with Medusa, Gatsby and common dev tools.`,
+    title: `Kalina-Vet, Kleintierarztpraxis - Zasieki`,
+    description: `Kalina-Vet, Kleintierarztpraxis - Zasieki`,
     author: `@medusajs`,
   },
   plugins: [

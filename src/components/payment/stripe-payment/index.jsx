@@ -5,6 +5,7 @@ import { useCart } from "../../../hooks/use-cart"
 import InjectableCardForm from "./injectable-card-form"
 
 const STRIPE_KEY = process.env.GATSBY_STRIPE_KEY || ""
+
 const stripePromise = loadStripe(STRIPE_KEY)
 
 const StripePayment = () => {
@@ -28,7 +29,8 @@ const StripePayment = () => {
 
   return (
     <Elements stripe={stripePromise} options={options}>
-      <InjectableCardForm session={stripeSession} />
+      <InjectableCardForm session={stripeSession} /> 
+     {/* <CheckoutForm   session={stripeSession}/> */}
     </Elements>
   )
 }

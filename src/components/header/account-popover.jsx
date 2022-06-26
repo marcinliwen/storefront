@@ -28,11 +28,11 @@ const AccountPopover = () => {
   return (
     <Fragment>
       <Menu as="div" className="relative inline-block text-left">
-        <div>
+        
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-600">
             {customer ? customerName : "Account"}
           </Menu.Button>
-        </div>
+       
 
         <PopoverTransition>
           <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 px-6 py-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">

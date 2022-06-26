@@ -20,13 +20,19 @@ p {
   @apply font-light;
 }
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind forms;
 
 @layer components {
   .btn-ui {
-    @apply py-2 px-4 bg-ui-dark text-white text-sm font-medium rounded-md shadow focus:outline-none focus:ring-2 focus:ring-ui-dark focus:ring-opacity-75 disabled:bg-ui-medium;
+    @apply py-2 px-4 bg-ui-red text-white text-center text-sm font-medium rounded-md shadow focus:outline-none focus:ring-2 focus:ring-ui-dark focus:ring-opacity-75 disabled:bg-ui-medium;
+  }
+}
+@layer components{
+  .btn-second{
+    @apply border-gray-700 text-gray-700 border-2 bg-transparent;
   }
 }
 
@@ -40,4 +46,34 @@ p {
   .layout-base {
     @apply min-h-screen max-w-screen-2xl mx-auto py-12 px-4 sm:py-8 sm:px-6 lg:px-12;
   }
+}
+@layer base {
+  html {
+    font-family: Montserrat, system-ui, sans-serif;
+  }
+}
+
+.bg-gradient{
+  background: linear-gradient(180deg,#baecfa 60%,#9de4f6);
+}
+@layer components {
+.logo-text-ui {
+  @apply text-ui-red font-bold text-4xl md:text-6xl my-8 md:my-16
+}
+}
+@layer components {
+  .container{
+    @apply max-w-screen-2xl mx-auto py-12 px-4 sm:py-8 sm:px-6 lg:px-12
+  } 
+}
+.logo-text-ui{
+  position: relative;
+}
+.logo-text-ui:after{
+  content:"";
+  width: 50%;
+  height: 3px;
+  display: block;
+    margin-top: 15px;
+  background-color: #F24C3D;
 }
